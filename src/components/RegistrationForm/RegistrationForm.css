@@ -10,14 +10,16 @@
 
 .reg-form-inputs {
   margin: 10px;
+  width: 41%;
 }
 
 .label-margin {
   display: inline-block;
-  width: 180px;
+  width: 150px;
   text-align: right;
   font-family: "Fredoka One", cursive;
   color: rgb(41, 79, 22);
+  font-size: 15px
 }
 
 .reg-footer {
@@ -39,6 +41,7 @@
   font-size: 15px;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
+  width: 40%;
 }
 
 .signup-button:hover {
@@ -55,7 +58,9 @@
   font-family: "Fredoka One", cursive;
   text-decoration: none;
   color: #145e6c;
-  margin: 10px 0;
+  margin:auto;
+  margin-left: 35px;
+  font-size: 13px;
 }
 
 .account-link:hover{
