@@ -1,0 +1,55 @@
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-h2 {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: rgb(9, 81, 94);
+  font-size: 30px;
+  text-align: center;
+}
+
+.total-score {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: rgb(41, 79, 22);
+  margin: 5px;
+  margin-bottom: 25px;
+}
+
+.dashboard-h3 {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: rgb(41, 79, 22);
+  margin-top: 25px;
+}
+
+.practice-button {
+  font-family: "Fredoka One", cursive;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #02887b, #3b5361);
+  background-image: -moz-linear-gradient(top, #02887b, #3b5361);
+  background-image: -ms-linear-gradient(top, #02887b, #3b5361);
+  background-image: -o-linear-gradient(top, #02887b, #3b5361);
+  background-image: linear-gradient(to bottom, #02887b, #3b5361);
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  margin: auto;
+}
+
+.practice-button:hover {
+  background: #04b8a3;
+  background-image: -webkit-linear-gradient(top, #04b8a3, #818a91);
+  background-image: -moz-linear-gradient(top, #04b8a3, #818a91);
+  background-image: -ms-linear-gradient(top, #04b8a3, #818a91);
+  background-image: -o-linear-gradient(top, #04b8a3, #818a91);
+  background-image: linear-gradient(to bottom, #04b8a3, #818a91);
+  text-decoration: none;
+}
