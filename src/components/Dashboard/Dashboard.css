@@ -53,3 +53,54 @@
   background-image: linear-gradient(to bottom, #04b8a3, #818a91);
   text-decoration: none;
 }
+
+.words-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 70%;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.word-item {
+  transition-property: border, box-shadow, background;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  background: rgba(88, 123, 127, 0.815);
+  color: #ececec;
+  width: 250px;
+  margin: 15px;
+  word-wrap: break-word;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #1e2019;
+  border-radius: 5px;
+  box-shadow: 0px 0px #1e2019;
+}
+
+.word-item:hover {
+  color: #ececec;
+  background: #587b7f;
+  border-radius: 5px;
+  box-shadow: 0px 2px #1e2019;
+  font-family: "Fredoka One", cursive;
+}
+
+.word {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: rgb(238, 231, 231);
+  margin-top: 25px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.word-counts {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: rgb(238, 231, 231);
+  margin-top: 25px;
+  font-size: 15px;
+}

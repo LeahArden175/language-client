@@ -27,3 +27,18 @@
 .nav-links:hover{
     color: #0589a7;
 }
+
+.user-name{
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.logout-reg-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

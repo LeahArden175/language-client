@@ -24,10 +24,10 @@ export default class Dashboard extends Component {
     renderWords = () => {
         return this.state.words.map(word => {
             return (
-                <li key={word.id}>
-                    <h4>{word.original}</h4>
-                    <p>correct answer count: {word.correct_count}</p>
-                    <p>incorrect answer count: {word.incorrect_count}</p>
+                <li key={word.id} className='word-item'>
+                    <h4 className="word">{word.original}</h4>
+                    <p className="word-counts">correct answer count: {word.correct_count}</p>
+                    <p className="word-counts">incorrect answer count: {word.incorrect_count}</p>
                 </li>
             )
         })
@@ -43,7 +43,7 @@ export default class Dashboard extends Component {
               <button className='practice-button'>Start practicing</button>
           </Link>
           <h3 className='dashboard-h3'>Words to practice</h3>
-          <ul>{this.renderWords()}</ul>
+          <ul className='words-list'>{this.renderWords()}</ul>
       </section>
     );
   }
