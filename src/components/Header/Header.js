@@ -44,7 +44,7 @@ class Header extends Component {
       <header className='header-div'>
         <h1>
           <Link to='/' className="header-link">
-            Learn-A-Lang
+            Spaced repetition
           </Link>
         </h1>
         {TokenService.hasAuthToken()
