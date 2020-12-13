@@ -1,0 +1,17 @@
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reg-form-inputs{
+    margin: 10px;
+}
+
+.label-margin{
+    display: inline-block;
+    width: 180px;
+    text-align: right;
+    font-family: 'Fredoka One', cursive;
+    color: rgb(41, 79, 22);
+}

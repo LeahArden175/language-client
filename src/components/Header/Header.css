@@ -1,0 +1,25 @@
+.header-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-link{
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+    color: rgb(9, 126, 147);
+    font-size: 37px;
+    text-align: center;
+}
+
+.login-reg-div{
+    display: flex;
+}
+
+.nav-links {
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+    color: rgb(41, 79, 22);
+    margin: 5px;
+}

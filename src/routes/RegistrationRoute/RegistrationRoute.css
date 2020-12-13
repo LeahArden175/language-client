@@ -1,0 +1,21 @@
+.reg-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.reg-p{
+    margin: 10px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color: rgb(41, 79, 22);
+}
+
+.reg-h2{
+    color: rgb(9, 126, 147);
+    margin: 10px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+}

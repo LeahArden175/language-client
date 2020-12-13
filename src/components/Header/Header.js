@@ -19,6 +19,7 @@ class Header extends Component {
         </span>
         <nav>
           <Link
+            className="nav-links"
             onClick={this.handleLogoutClick}
             to='/login'>
             Logout
@@ -30,20 +31,20 @@ class Header extends Component {
 
   renderLoginLink() {
     return (
-      <nav>
-        <Link to='/login'>Login</Link>
+      <nav className='login-reg-div'>
+        <Link className="nav-links" to='/login'>Login</Link>
         {' '}
-        <Link to='/register'>Sign up</Link>
+        <Link className="nav-links" to='/register'>Sign up</Link>
       </nav>
     )
   }
 
   render() {
     return (
-      <header>
+      <header className='header-div'>
         <h1>
-          <Link to='/'>
-            Spaced repetition
+          <Link to='/' className="header-link">
+            Learn-A-Lang
           </Link>
         </h1>
         {TokenService.hasAuthToken()
