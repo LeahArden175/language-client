@@ -1,0 +1,24 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-style: dotted;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.not-found-p{
+    margin: 10px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    color: rgb(41, 79, 22);
+}
+
+.not-found-h2{
+    color: rgb(9, 126, 147);
+    margin: 10px;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+}
