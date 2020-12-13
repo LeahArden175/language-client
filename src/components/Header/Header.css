@@ -23,3 +23,7 @@
     color: rgb(41, 79, 22);
     margin: 5px;
 }
+
+.nav-links:hover{
+    color: #0589a7;
+}

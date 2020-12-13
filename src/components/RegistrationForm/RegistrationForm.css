@@ -3,6 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 20px 0;
+  border: solid;
+  padding: 35px 20px;
+  background-color: #cbcbcb;
 }
 
 .reg-form-inputs {
