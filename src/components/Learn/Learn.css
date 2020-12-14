@@ -12,23 +12,30 @@
     align-items: center;
 }
 
+.italian-word-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .learn-h2{
     font-family: 'Fredoka One', cursive;
     text-decoration: none;
     color: rgb(41, 79, 22);
-    margin: 5px;
+    margin: 15px;
 }
 
 .learn-span{
     font-family: 'Fredoka One', cursive;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    margin: 30px;
     font-size: 20px;
     border: solid;
-    padding: 20px;
+    padding: 15px;
     background-color: bisque;
     text-transform: capitalize;
+    margin: 0 15px;
 }
 
 .score-div{
@@ -36,7 +43,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 20px;
-  margin-top: 40px;
+  margin-top: 10px;
   border: solid;
   padding: 35px 20px;
   background-color: #cbcbcb;
@@ -69,7 +76,8 @@
     text-align: center;
     font-family: "Fredoka One", cursive;
     color: rgb(41, 79, 22);
-    font-size: 17px
+    font-size: 17px;
+    margin-top: 15px;
 }
 
 .learn-input{
@@ -102,4 +110,51 @@
     background-image: -o-linear-gradient(top, #04b8a3, #818a91);
     background-image: linear-gradient(to bottom, #04b8a3, #818a91);
     text-decoration: none;
+}
+
+.DisplayScore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.DisplayFeedback{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.feedback {
+    width: 80%;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    color: rgb(22, 24, 21);
+}
+
+.correct-incorrect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    border: dashed;
+
+}
+
+.incorrect{
+    width: 80%;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    color: rgb(41, 79, 22);
+}
+
+.correct {
+    width: 100%;
+    text-align: center;
+    font-family: "Fredoka One", cursive;
+    color: rgb(44, 96, 115)
 }

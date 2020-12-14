@@ -49,7 +49,7 @@ export default class Learn extends Component {
         this.setState({
           answer: res.answer,
           isCorrect: res.isCorrect,
-        //   nextWord: res.nextWord,
+          //   nextWord: res.nextWord,
           totalScore: res.totalScore,
           wordCorrectCount: res.wordCorrectCount,
           wordIncorrectCount: res.wordIncorrectCount,
@@ -67,9 +67,9 @@ export default class Learn extends Component {
   renderItalianWord = () => {
     if (!this.state.answer) {
       return (
-        <div>
-          <h2 className="">Translate the word:</h2>
-          <span className="">{this.state.nextWord}</span>
+        <div className="italian-word-div">
+          <h2 className="learn-h2">Translate the word:</h2>
+          <span className="learn-span">{this.state.nextWord}</span>
         </div>
       );
     } else {
@@ -80,9 +80,9 @@ export default class Learn extends Component {
   renderScore = () => {
     if (this.state.isCorrect === false) {
       return (
-        <div>
+        <div className="correct-incorrect">
           <h2 className="incorrect">Good try, but not quite right :(</h2>
-          <p>
+          <p className="feedback">
             The correct answer was {this.state.answer} and you chose{" "}
             {this.state.guess}
           </p>
@@ -90,7 +90,11 @@ export default class Learn extends Component {
       );
     } else {
       if (this.state.isCorrect === true) {
-        return <h2 className="correct">You were correct! :D</h2>;
+        return (
+          <div>
+            <h2 className="correct">You were correct! :D</h2>
+          </div>
+        );
       }
     }
   };
@@ -118,7 +122,7 @@ export default class Learn extends Component {
     } else {
       return (
         <form>
-          <button>Try another word!</button>
+          <button className="learn-submit">Try another word!</button>
         </form>
       );
     }
@@ -127,7 +131,9 @@ export default class Learn extends Component {
   displayScore = () => {
     return (
       <div className="DisplayScore">
-        <p>Your total score is: {this.state.totalScore}</p>
+        <p className="total-score">
+          Your total score is: {this.state.totalScore}
+        </p>
       </div>
     );
   };
@@ -135,24 +141,27 @@ export default class Learn extends Component {
   displayFeedback = () => {
     if (this.state.isCorrect === true) {
       return (
-        <div className='DisplayFeedback'>
-          {/* <p>The correct translation for {this.state.nextWord} was {this.state.answer} and you chose {this.state.answer}!</p> */}
-          <p>The correct translation for {this.state.nextWord} was {this.state.answer} and you chose {this.state.guess}!</p>
+        <div className="DisplayFeedback">
+          <p className="feedback">
+            The correct translation for {this.state.nextWord} was{" "}
+            {this.state.answer} and you chose {this.state.guess}!
+          </p>
         </div>
       );
     } else if (this.state.isCorrect === false) {
       return (
-        <div className='DisplayFeedback'>
-          <p>
-            The correct translation for {this.state.nextWord} was {this.state.answer} and you chose {this.state.guess}!
+        <div className="DisplayFeedback">
+          <p className="feedback">
+            The correct translation for {this.state.nextWord} was{" "}
+            {this.state.answer} and you chose {this.state.guess}!
           </p>
         </div>
       );
     } else {
-        if(this.state.isCorrect === null) {
-            return;
-        }
-    } 
+      if (this.state.isCorrect === null) {
+        return;
+      }
+    }
   };
 
   render() {
