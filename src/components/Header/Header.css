@@ -1,8 +1,9 @@
 .header-div{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: #cbcbcb;
 }
 
 .header-link{
@@ -15,17 +16,21 @@
 
 .login-reg-div{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(159, 152, 146);
 }
 
 .nav-links {
     font-family: 'Fredoka One', cursive;
     text-decoration: none;
-    color: rgb(41, 79, 22);
+    color: black;
     margin: 5px;
 }
 
 .nav-links:hover{
-    color: #0589a7;
+    color: #0c6d83;
 }
 
 .user-name{
@@ -33,12 +38,12 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
     margin: 5px;
-    margin-bottom: 10px;
 }
 
 .logout-reg-div{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(159, 152, 146);
 }
