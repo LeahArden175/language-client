@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import LanguageService from "../../services/language-services";
 import config from "../../config";
 import TokenService from "../../services/token-service";
+import Button from '../Button/Button'
 import "./Learn.css";
+import { Link } from "react-router-dom";
 
 export default class Learn extends Component {
   state = {
     nextWord: "",
+    answerWord : '',
     totalScore: 0,
     correctCount: 0,
     incorrectCount: 0,
@@ -21,6 +24,7 @@ export default class Learn extends Component {
 
   getLanguageHead = () => {
     LanguageService.getLanguageHead().then((res) => {
+      console.log('from get lang', res)
       this.setState({
         nextWord: res.nextWord,
         totalScore: res.totalScore,
@@ -46,13 +50,15 @@ export default class Learn extends Component {
         !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
       )
       .then((res) => {
+        console.log('from post', res)
         this.setState({
           answer: res.answer,
+          answerWord : this.state.nextWord,
           isCorrect: res.isCorrect,
-          //   nextWord: res.nextWord,
           totalScore: res.totalScore,
-          wordCorrectCount: res.wordCorrectCount,
-          wordIncorrectCount: res.wordIncorrectCount,
+          nextWord : res.nextWord
+          //correctCount: res.wordCorrectCount,
+          //incorrectCount: res.wordIncorrectCount,
         });
       });
   };
@@ -121,14 +127,24 @@ export default class Learn extends Component {
       );
     } else {
       return (
-        <form>
-          <button className="learn-submit">Try another word!</button>
+        <form onSubmit={this.getNextWord}>
+            <button className="learn-submit">
+              Try another word!
+            </button>
         </form>
+        // <Link to='/learn'>
+        //   <Button
+        //   onClick={this.getNextWord}
+        //   >
+        //     Try another word!
+        //   </Button>
+        // </Link>
       );
     }
   };
 
   displayScore = () => {
+    console.log(this.state)
     return (
       <div className="DisplayScore">
         <p className="total-score">
@@ -142,8 +158,8 @@ export default class Learn extends Component {
     if (this.state.isCorrect === true) {
       return (
         <div className="DisplayFeedback">
-          <p className="feedback">
-            The correct translation for {this.state.nextWord} was{" "}
+          <p>
+            The correct translation for {this.state.answerWord} was{" "}
             {this.state.answer} and you chose {this.state.guess}!
           </p>
         </div>
@@ -151,8 +167,8 @@ export default class Learn extends Component {
     } else if (this.state.isCorrect === false) {
       return (
         <div className="DisplayFeedback">
-          <p className="feedback">
-            The correct translation for {this.state.nextWord} was{" "}
+          <p>
+            The correct translation for {this.state.answerWord} was{" "}
             {this.state.answer} and you chose {this.state.guess}!
           </p>
         </div>
@@ -164,13 +180,28 @@ export default class Learn extends Component {
     }
   };
 
+  getNextWord = (event) => {
+    event.preventDefault();
+    LanguageService.getLanguageHead().then((res) => {
+      console.log('from get next', this.state)
+      this.setState({
+        //nextWord: res.nextWord,
+        //totalScore: res.totalScore,
+        //correctCount: res.wordCorrectCount,
+        //incorrectCount: res.wordIncorrectCount,
+        answer: "",
+        isCorrect: null,
+        guess: "",
+      });
+    });
+    //console.log(this.state.totalScore);
+  };
+
   render() {
-    console.log(this.state);
+    //console.log(this.state);
     return (
       <section className="learn-section">
         <main className="learn-main">
-          {/* <h2 className='learn-h2'>Translate the word:</h2>
-          <span className="learn-span">{this.state.nextWord}</span> */}
           {this.renderItalianWord()}
           {this.displayFeedback()}
           {this.renderScore()}

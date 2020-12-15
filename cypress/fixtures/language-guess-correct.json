@@ -1,8 +1,8 @@
 {
-  "nextWord": "test-next-word-from-correct-guess",
+  "nextWord": "puzzle",
   "wordCorrectCount": 111,
   "wordIncorrectCount": 222,
   "totalScore": 333,
-  "answer": "test-answer-from-correct-guess",
+  "answer": "sparklers",
   "isCorrect": true
 }
