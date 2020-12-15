@@ -57,8 +57,6 @@ export default class Learn extends Component {
           isCorrect: res.isCorrect,
           totalScore: res.totalScore,
           nextWord : res.nextWord
-          //correctCount: res.wordCorrectCount,
-          //incorrectCount: res.wordIncorrectCount,
         });
       });
   };
@@ -132,13 +130,6 @@ export default class Learn extends Component {
               Try another word!
             </button>
         </form>
-        // <Link to='/learn'>
-        //   <Button
-        //   onClick={this.getNextWord}
-        //   >
-        //     Try another word!
-        //   </Button>
-        // </Link>
       );
     }
   };
@@ -185,20 +176,14 @@ export default class Learn extends Component {
     LanguageService.getLanguageHead().then((res) => {
       console.log('from get next', this.state)
       this.setState({
-        //nextWord: res.nextWord,
-        //totalScore: res.totalScore,
-        //correctCount: res.wordCorrectCount,
-        //incorrectCount: res.wordIncorrectCount,
         answer: "",
         isCorrect: null,
         guess: "",
       });
     });
-    //console.log(this.state.totalScore);
   };
 
   render() {
-    //console.log(this.state);
     return (
       <section className="learn-section">
         <main className="learn-main">
