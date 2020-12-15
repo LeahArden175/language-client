@@ -153,8 +153,14 @@
 }
 
 .correct {
-    width: 100%;
+    width: 80%;
     text-align: center;
     font-family: "Fredoka One", cursive;
     color: rgb(44, 96, 115)
+}
+
+.line{
+    width: 50%;
+    height: 3px;
+    background-color: black;
 }

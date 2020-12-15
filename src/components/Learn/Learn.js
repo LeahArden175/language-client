@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import LanguageService from "../../services/language-services";
 import config from "../../config";
 import TokenService from "../../services/token-service";
-import Button from '../Button/Button'
 import "./Learn.css";
-import { Link } from "react-router-dom";
 
 export default class Learn extends Component {
   state = {
@@ -58,6 +56,7 @@ export default class Learn extends Component {
           totalScore: res.totalScore,
           nextWord : res.nextWord
         });
+        console.log('state from post', this.state)
       });
   };
 
@@ -71,7 +70,7 @@ export default class Learn extends Component {
   renderItalianWord = () => {
     if (!this.state.answer) {
       return (
-        <div className="italian-word-div">
+        <div className="italian-word-div" aria-live='polite'>
           <h2 className="learn-h2">Translate the word:</h2>
           <span className="learn-span">{this.state.nextWord}</span>
         </div>
@@ -84,7 +83,7 @@ export default class Learn extends Component {
   renderScore = () => {
     if (this.state.isCorrect === false) {
       return (
-        <div className="correct-incorrect">
+        <div className="correct-incorrect" aria-live='polite'>
           <h2 className="incorrect">Good try, but not quite right :(</h2>
           <p className="feedback">
             The correct answer was {this.state.answer} and you chose{" "}
@@ -95,7 +94,7 @@ export default class Learn extends Component {
     } else {
       if (this.state.isCorrect === true) {
         return (
-          <div>
+          <div className="correct-incorrect" aria-live='polite'>
             <h2 className="correct">You were correct! :D</h2>
           </div>
         );
@@ -135,10 +134,10 @@ export default class Learn extends Component {
   };
 
   displayScore = () => {
-    console.log(this.state)
+    //console.log(this.state)
     return (
       <div className="DisplayScore">
-        <p className="total-score">
+        <p className="total-score" aria-live='polite'>
           Your total score is: {this.state.totalScore}
         </p>
       </div>
@@ -149,7 +148,7 @@ export default class Learn extends Component {
     if (this.state.isCorrect === true) {
       return (
         <div className="DisplayFeedback">
-          <p>
+          <p className='feedback' aria-live='polite'>
             The correct translation for {this.state.answerWord} was{" "}
             {this.state.answer} and you chose {this.state.guess}!
           </p>
@@ -157,8 +156,8 @@ export default class Learn extends Component {
       );
     } else if (this.state.isCorrect === false) {
       return (
-        <div className="DisplayFeedback">
-          <p>
+        <div className="DisplayFeedback" aria-live='polite'>
+          <p className='feedback'>
             The correct translation for {this.state.answerWord} was{" "}
             {this.state.answer} and you chose {this.state.guess}!
           </p>
@@ -186,7 +185,7 @@ export default class Learn extends Component {
   render() {
     return (
       <section className="learn-section">
-        <main className="learn-main">
+        <main className="learn-main" aria-live="polite">
           {this.renderItalianWord()}
           {this.displayFeedback()}
           {this.renderScore()}
@@ -197,6 +196,7 @@ export default class Learn extends Component {
               You have answered this word correctly {this.state.correctCount}{" "}
               times.
             </p>
+            <hr className='line' />
             <p className="learn-p">
               You have answered this word incorrectly{" "}
               {this.state.incorrectCount} times.
