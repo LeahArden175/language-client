@@ -48,22 +48,34 @@ export default class Learn extends Component {
         !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
       )
       .then((res) => {
-        console.log('from post', res)
         this.setState({
           answer: res.answer,
           answerWord : this.state.nextWord,
           isCorrect: res.isCorrect,
           totalScore: res.totalScore,
           nextWord : res.nextWord
-        });
-        console.log('state from post', this.state)
-      });
+        })
+      })
+      .then(() => console.log(this.state.answerWord))
+      .then(() => {
+        if(this.state.isCorrect){
+          this.setState({
+            correctCount : this.state.correctCount + 1
+          })
+        } else {
+          if(!this.state.isCorrect) {
+            this.setState({
+              incorrectCount : this.state.incorrectCount + 1
+            })
+          }
+        }
+      })
   };
 
   handleGuessChange = (event) => {
     const submittedGuess = event.target.value;
     this.setState({
-      guess: submittedGuess,
+      guess: submittedGuess.toLowerCase(),
     });
   };
 
