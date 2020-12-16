@@ -4,7 +4,7 @@ import TokenService from './token-service'
 
 const LanguageService = {
     getLanguage() {
-        return fetch(`${config.API_ENDPOINT}/language`, {
+        return fetch(`${config.REACT_APP_API_BASE}/language`, {
           headers: {
               'authorization' : `bearer ${TokenService.getAuthToken()}`
           },
@@ -16,7 +16,7 @@ const LanguageService = {
           )
       },
       getLanguageHead() {
-        return fetch(`${config.API_ENDPOINT}/language/head`, {
+        return fetch(`${config.REACT_APP_API_BASE}/language/head`, {
           headers : {
             'authorization' : `bearer ${TokenService.getAuthToken()}`
           },
@@ -28,7 +28,7 @@ const LanguageService = {
         )
       },
       postGuess() {
-        return fetch(`${config.API_ENDPOINT}/language/guess`, {
+        return fetch(`${config.REACT_APP_API_BASE}/language/guess`, {
           method : "POST",
           headers : {
             'authorization' : `bearer ${TokenService.getAuthToken()}`,

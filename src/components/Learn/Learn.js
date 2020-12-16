@@ -34,7 +34,7 @@ export default class Learn extends Component {
 
   handleGuessSubmit = (event) => {
     event.preventDefault();
-    fetch(`${config.API_ENDPOINT}/language/guess`, {
+    fetch(`${config.REACT_APP_API_BASE}/language/guess`, {
       method: "POST",
       headers: {
         authorization: `bearer ${TokenService.getAuthToken()}`,
@@ -178,6 +178,8 @@ export default class Learn extends Component {
         answer: "",
         isCorrect: null,
         guess: "",
+        correctCount : res.wordCorrectCount,
+        incorrectCount : res.wordIncorrectCount
       });
     });
   };
