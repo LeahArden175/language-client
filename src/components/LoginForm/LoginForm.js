@@ -56,7 +56,7 @@ class LoginForm extends Component {
             Username
           </Label>
           <Input
-          className="reg-form-inputs"
+          className="login-form-inputs"
             ref={this.firstInput}
             id='login-username-input'
             name='username'

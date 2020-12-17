@@ -6,7 +6,6 @@
   border: solid;
   padding: 35px 20px;
   background-color: #cbcbcb;
-  width: 90%
 }
 
 .login-button{
@@ -38,8 +37,13 @@
 .label-width{
   display: inline-block;
   width: 120px;
-  text-align: right;
+  text-align: left;
   font-family: "Fredoka One", cursive;
   color: rgb(41, 79, 22);
   font-size: 15px
+}
+
+.login-form-inputs{
+  margin: 10px;
+  width: 41%;
 }

@@ -1,7 +1,7 @@
 .reg-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   margin: 20px 0;
   border: solid;
   padding: 35px 20px;
@@ -9,17 +9,21 @@
 }
 
 .reg-form-inputs {
-  margin: 10px;
   width: 41%;
+}
+
+.inputs{
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .label-margin {
   display: inline-block;
   width: 150px;
-  text-align: right;
+  text-align: left;
   font-family: "Fredoka One", cursive;
   color: rgb(41, 79, 22);
-  font-size: 15px
+  font-size: 13px
 }
 
 .reg-footer {
@@ -38,10 +42,10 @@
   background-image: linear-gradient(to bottom, #02887b, #3b5361);
   border-radius: 2px;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 13px;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
-  width: 40%;
+  width: 60%;
 }
 
 .signup-button:hover {
