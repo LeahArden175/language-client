@@ -296,10 +296,11 @@
   }
 
   .feedback {
-    width: 80%;
+    width: 50%;
     text-align: center;
     font-family: "Fredoka One", cursive;
     color: rgb(22, 24, 21);
+    font-size: 23px;
   }
 
   .correct-incorrect {
@@ -309,6 +310,7 @@
     align-items: center;
     margin: 15px;
     border: dashed;
+    width: 70%;
   }
 
   .incorrect {
