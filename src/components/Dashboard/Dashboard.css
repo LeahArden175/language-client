@@ -60,7 +60,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   text-align: center;
-  width: 70%;
+  width: 90%;
   margin-top: 15px;
   padding: 0;
 }
@@ -71,7 +71,7 @@
   transition-timing-function: linear;
   background: rgba(88, 123, 127, 0.815);
   color: #ececec;
-  width: 250px;
+  width: 80%;
   margin: 15px;
   word-wrap: break-word;
   padding: 5px 15px 5px 15px;
@@ -103,4 +103,115 @@
   color: rgb(238, 231, 231);
   margin-top: 25px;
   font-size: 15px;
+}
+
+@media all and (min-width: 800px){
+  .dashboard-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dashboard-h2 {
+    font-family: "Fredoka One", cursive;
+    text-decoration: none;
+    color: rgb(9, 81, 94);
+    font-size: 35px;
+    text-align: center;
+  }
+  
+  .total-score {
+    font-family: "Fredoka One", cursive;
+    text-decoration: none;
+    color: rgb(41, 79, 22);
+    margin: 5px;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .dashboard-h3 {
+    font-family: "Fredoka One", cursive;
+    text-decoration: none;
+    color: rgb(41, 79, 22);
+    font-size: 30px;
+    margin-top: 40px;
+  }
+  
+  .practice-button {
+    font-family: "Fredoka One", cursive;
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #02887b, #3b5361);
+    background-image: -moz-linear-gradient(top, #02887b, #3b5361);
+    background-image: -ms-linear-gradient(top, #02887b, #3b5361);
+    background-image: -o-linear-gradient(top, #02887b, #3b5361);
+    background-image: linear-gradient(to bottom, #02887b, #3b5361);
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 19px;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    margin: auto;
+  }
+  
+  .practice-button:hover {
+    background: #04b8a3;
+    background-image: -webkit-linear-gradient(top, #04b8a3, #818a91);
+    background-image: -moz-linear-gradient(top, #04b8a3, #818a91);
+    background-image: -ms-linear-gradient(top, #04b8a3, #818a91);
+    background-image: -o-linear-gradient(top, #04b8a3, #818a91);
+    background-image: linear-gradient(to bottom, #04b8a3, #818a91);
+    text-decoration: none;
+  }
+  
+  .words-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 80%;
+    margin-top: 40px;
+    padding: 0;
+  }
+  
+  .word-item {
+    transition-property: border, box-shadow, background;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    background: rgba(88, 123, 127, 0.815);
+    color: #ececec;
+    width: 250px;
+    margin: 15px;
+    word-wrap: break-word;
+    padding: 5px 15px 5px 15px;
+    border: 1px solid #1e2019;
+    border-radius: 5px;
+    box-shadow: 0px 0px #1e2019;
+  }
+  
+  .word-item:hover {
+    color: #ececec;
+    background: #587b7f;
+    border-radius: 5px;
+    box-shadow: 0px 2px #1e2019;
+    font-family: "Fredoka One", cursive;
+  }
+  
+  .word {
+    font-family: "Fredoka One", cursive;
+    text-decoration: none;
+    color: rgb(238, 231, 231);
+    margin-top: 25px;
+    font-size: 25px;
+    text-transform: capitalize;
+  }
+  
+  .word-counts {
+    font-family: "Fredoka One", cursive;
+    text-decoration: none;
+    color: rgb(238, 231, 231);
+    margin-top: 25px;
+    font-size: 16px;
+  }
 }
