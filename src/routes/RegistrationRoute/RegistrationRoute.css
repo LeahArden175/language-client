@@ -20,3 +20,31 @@
     text-align: center;
     font-family: 'Fredoka One', cursive;
 }
+
+@media all and (min-width: 800px){
+    .reg-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 90%
+    }
+    
+    .reg-p{
+        margin: 10px;
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        color: rgb(41, 79, 22);
+        font-size: 20px;
+    }
+    
+    .reg-h2{
+        color: rgb(9, 126, 147);
+        margin: 10px;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        font-size: 30px;
+    }
+}

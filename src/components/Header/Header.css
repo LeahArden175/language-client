@@ -1,49 +1,103 @@
-.header-div{
+.header-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cbcbcb;
+}
+
+.header-link {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: rgb(15, 58, 67);
+  font-size: 30px;
+  text-align: center;
+}
+
+.login-reg-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(159, 152, 146);
+  padding: 0 10px;
+}
+
+.nav-links {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+}
+
+.nav-links:hover {
+  color: #0c6d83;
+}
+
+.user-name {
+  font-family: "Fredoka One", cursive;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 5px;
+}
+
+.logout-reg-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgb(159, 152, 146);
+}
+
+@media all and (min-width: 800px) {
+  .header-div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: #cbcbcb;
-}
+  }
 
-.header-link{
-    font-family: 'Fredoka One', cursive;
+  .header-link {
+    font-family: "Fredoka One", cursive;
     text-decoration: none;
     color: rgb(15, 58, 67);
     font-size: 37px;
     text-align: center;
-}
+  }
 
-.login-reg-div{
+  .login-reg-div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     background-color: rgb(159, 152, 146);
-}
+  }
 
-.nav-links {
-    font-family: 'Fredoka One', cursive;
+  .nav-links {
+    font-family: "Fredoka One", cursive;
     text-decoration: none;
     color: black;
-    margin: 5px;
-}
+    margin: 5px 70px;
+    font-size: 20px;
+  }
 
-.nav-links:hover{
+  .nav-links:hover {
     color: #0c6d83;
-}
+  }
 
-.user-name{
-    font-family: 'Fredoka One', cursive;
+  .user-name {
+    font-family: "Fredoka One", cursive;
     text-decoration: none;
     color: rgb(0, 0, 0);
     margin: 5px;
-}
+  }
 
-.logout-reg-div{
+  .logout-reg-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     background-color: rgb(159, 152, 146);
+  }
 }
