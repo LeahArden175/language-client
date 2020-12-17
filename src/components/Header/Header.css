@@ -47,6 +47,7 @@
   justify-content: space-between;
   width: 100%;
   background-color: rgb(159, 152, 146);
+  padding: 0 10px;
 }
 
 @media all and (min-width: 800px) {
@@ -89,14 +90,15 @@
   .user-name {
     font-family: "Fredoka One", cursive;
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    margin: 5px;
+    color: black;
+    margin: 5px 70px;
+    font-size: 20px;
   }
 
   .logout-reg-div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     background-color: rgb(159, 152, 146);
   }
